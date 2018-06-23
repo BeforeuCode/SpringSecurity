@@ -12,8 +12,8 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser("john").password("secret123").roles("EMPLOYEE");
-		auth.inMemoryAuthentication().withUser("mary").password("secret123").roles("MANAGER");
+		auth.inMemoryAuthentication().withUser("john").password("secret123").roles("EMPLOYEE", "MANAGER");
+		auth.inMemoryAuthentication().withUser("mary").password("secret123").roles("MANAGER" , "BOSS");
 		auth.inMemoryAuthentication().withUser("susan").password("secret123").roles("ADMIN");
 	}	
 	

@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <html>
 
 <head>
@@ -13,6 +14,17 @@
 	<p>
 	Welcome to the Evil Ltd. home page!
 	</p>
+
+<hr>
+<!-- Display user name and role -->
+<p>
+
+User: <security:authentication property="principal.username"/>
+<br><br>
+Role(s): <security:authentication property="principal.authorities"/>
+
+</p>
+
 
 <hr>
 

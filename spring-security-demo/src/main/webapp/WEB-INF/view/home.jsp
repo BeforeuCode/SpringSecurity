@@ -26,24 +26,35 @@
 	</p>
 
 <hr>
+	
+	<security:authorize access="hasRole('MANAGER')">
+	
 	<!-- Add a link to /leaders .. for the managers -->
-	<p>
+		
+		<p>
+		
+			<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+			(Only for Manager)
+		
+		</p>
 	
-		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
-		(Only for Manager)
+	</security:authorize>
 	
-	</p>
+	<security:authorize access="hasRole('ADMIN')">
+	
+		<!-- Add a link to /systems .. only for the admins -->
+			<p>
+			
+				<a href="${pageContext.request.contextPath}/systems">IT Systems</a>
+				(Only for Admins)
+				
+			</p>
 
-	<!-- Add a link to /systems .. only for the admins -->
-	<p>
+		<hr>
 	
-		<a href="${pageContext.request.contextPath}/systems">IT Systems</a>
-		(Only for Admins)
-	
-	</p>
+	</security:authorize>
 
 
-<hr>
 
 	<!-- Add a logout button -->
 	

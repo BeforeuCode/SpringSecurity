@@ -3,14 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>spring-security-demo</artifactId>
+	<artifactId>spring-security-demo-02-basic-security</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-demo</name>
+	<name>spring-security-demo-02-basic-security</name>
+	<url>http://maven.apache.org</url>
 
 	<properties>
-		<springframework.version>5.0.2.RELEASE</springframework.version>
+		<springframework.version>4.3.9.RELEASE</springframework.version>
+		<springsecurity.version>4.2.3.RELEASE</springsecurity.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -18,11 +20,24 @@
 
 	<dependencies>
 
-		<!-- Spring MVC support -->
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
 		</dependency>
 
 		<!-- Servlet, JSP and JSTL support -->
@@ -50,25 +65,25 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
-	<!-- TO DO: Add support for Maven WAR Plugin -->
+
 	<build>
-	<finalName>spring-security-demo</finalName>
-	
+		<finalName>springsecuritydemo</finalName>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<!-- Add maven coordinates for: maven-war-plugin -->
-					
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>3.2.0</version>
-				
+					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build>	
+
+	</build>
 
 </project>

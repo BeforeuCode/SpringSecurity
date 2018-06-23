@@ -17,13 +17,22 @@
 
 <hr>
 <!-- Display user name and role -->
-<p>
+	<p>
+	
+			User: <security:authentication property="principal.username"/>
+			<br><br>
+			Role(s): <security:authentication property="principal.authorities"/>
+	
+	</p>
 
-User: <security:authentication property="principal.username"/>
-<br><br>
-Role(s): <security:authentication property="principal.authorities"/>
-
-</p>
+<hr>
+	<!-- Add a link to /leaders .. for the managers -->
+	<p>
+	
+		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		(Only for Manager)
+	
+	</p>
 
 
 <hr>

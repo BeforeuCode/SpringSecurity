@@ -37,8 +37,8 @@
 	<!-- Add a link to /systems .. only for the admins -->
 	<p>
 	
-		<a href="${pageContext.request.contextPath}/systems">Leadership Meeting</a>
-		(Only for Manager)
+		<a href="${pageContext.request.contextPath}/systems">IT Systems</a>
+		(Only for Admins)
 	
 	</p>
 

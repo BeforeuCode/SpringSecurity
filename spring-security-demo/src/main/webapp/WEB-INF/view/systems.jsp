@@ -12,11 +12,13 @@
 	
 <hr>
 	
+
 	<p>
 		Super secret information for ADMINS only!
 		<br>
 		You are the ONLY ONE! YOU ARE A BOSS
 	</p>
+
 <hr>
 
 	<a href="${pageContext.request.contextPath}/">Back to Home page</a>

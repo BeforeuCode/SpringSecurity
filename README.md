@@ -1,4 +1,4 @@
-# SpringSecurity App that handles loging in, registering new users and restricting acces for account levels
+# SpringSecurity App that handles loging in, registering new users and restricting acces for account levels. Compatibility with MySql database and password encryption using Spring Security bcrypt hashing
 
 Used:
 Spring, Spring MVC , Spring Security, Hibernate Validator, MySQL
